@@ -4,11 +4,12 @@
 Extract zip with same root of Scrcpy
 =======================================================================
 
-Root Device:
+# Root Device:
 
 1. I'd perfer you have Magisk and any terminal emulator in your Phone
 Install Busybox & Props in Magisk
 2. Open terminal emulator key in:
+
 ```bash
 	props
 	4
@@ -23,7 +24,7 @@ if you never turn on USB debugging plz do refer Un-Root Device 1st step
 
 =======================================================================
 
-Un-Root Device:
+# Un-Root Device:
 
 1. Open setting--about phone--click on version untill it show you in Dev
 for MIUI you need turn on USB debugging(Security Settings)
@@ -50,7 +51,7 @@ sudo start adbd
 ```
 =======================================================================
 
-On PC:
+# On PC:
 Open starto.bat follow the steps connect with the IP you get
 press Enter key to continue untill GUI opened
 
@@ -60,13 +61,13 @@ https://github.com/leejohannes/Scrcpy-Starto
 
 https://github.com/Genymobile/scrcpy
 
-
+=======================================================================
 
 MIUI实现多屏协同功能
 基本实现友商同类产品全部功能
 通过开源的Scrcpy实现，理论上只要是安卓的设备就可以支持
 
-手机中安装有面具magisk的朋友：
+# 手机中安装有面具magisk的朋友：
 面具中安装busybox和props模块
 并且手机中存有终端程序，我喜欢用的终端程序是juice ssh
 在终端中依次输入
@@ -82,7 +83,7 @@ MIUI实现多屏协同功能
 设备会重启
 从来没有连过USB调试模式的请参照没有root的朋友的第一步
 
-手机没有root的朋友：
+# 手机没有root的朋友：
 不推荐刷官方的root，因为需要全清而且只是部分root，并且无法跟面具很好的配合，推荐使用twrp
 第一步
 设置--我的设备--全部参数--MIUI版本上连续点击，直到出现“你已处于开发者模式”提示
@@ -105,7 +106,7 @@ sudo start adbd
 
 没有root的朋友记得打开usb调试（安全设置）也进入电脑上的操作
 
-电脑上的操作
+# 电脑上的操作
 链接：https://pan.baidu.com/s/1PdAptZMcBsBfk6PsZWj-Gw 
 提取码：me6k
 下载并解压软件到一个不碍事的地方
@@ -124,7 +125,7 @@ shell setprop service.adb.tcp.port 5555
 
 
 
-快捷按键
+# 快捷按键
 切换全屏模式	Ctrl+f
 将窗口调整为 1:1	Ctrl+g
 调整窗口大小以删除黑色边框	Ctrl+x | 双击黑色背景
