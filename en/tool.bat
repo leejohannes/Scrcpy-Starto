@@ -1,6 +1,8 @@
 @echo off
 title adbtool
-cd /d "%~dp0"
+set pwd=%~dp0
+set pwd=%pwd:~0,-1%
+cd /d "pwd"
 cls 
 echo. un-root phone, connect in USB debugging 
 echo. adb shell setprop service.adb.tcp.port 5555
@@ -15,10 +17,10 @@ echo. adb devices		short to	de,device
 echo. adb connect		short to	co,con,conn
 echo. adb kill-server	short to	kill
 echo. adb start-server	short to	start
-echo. adb disconnect	short to	dis
+echo. adb disconnect		short to	dis
 :begin
 set input=<nul
-set /p input=%~dp0^adb^>
+set /p input=%pwd%^>adb:/ ^$ 
 if "%input%"=="" goto cmd
 if "%input%"=="2" ( start /i tool.bat 
 goto begin )
@@ -37,6 +39,7 @@ echo Run %input%, result£º
 %input%
 goto begin
 :cmd
-echo. keyin	tool.bat back to adbtool
-echo. 	starto.bat back to starto
+echo. key in	tool.bat back to adbtool
+echo. 	starto.bat open starto
+echo. 	scan.bat open Scan tool
 cmd /k
