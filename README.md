@@ -9,7 +9,7 @@ Root Device:
 1. I'd perfer you have Magisk and any terminal emulator in your Phone
 Install Busybox & Props in Magisk
 2. Open terminal emulator key in:
-#	props
+$	props
 #	4
 #	n
 #	service.adb.tcp.port
