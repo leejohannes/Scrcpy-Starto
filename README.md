@@ -9,7 +9,7 @@ Root Device:
 1. I'd perfer you have Magisk and any terminal emulator in your Phone
 Install Busybox & Props in Magisk
 2. Open terminal emulator key in:
-<<<<<<< HEAD
+
 ```bash
 	props
 	4
@@ -19,15 +19,6 @@ Install Busybox & Props in Magisk
 	y
 	y
 ```
-=======
-$	props
-#	4
-#	n
-#	service.adb.tcp.port
-#	5555
-#	y
-#	y
->>>>>>> ca0a490aa3a5368062f24922a296ef4ec61218f5
 then, your phone will reboot
 if you never turn on USB debugging plz do refer Un-Root Device 1st step
 
