@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Scrcpy-Starto
 
 
@@ -149,3 +150,6 @@ shell setprop service.adb.tcp.port 5555
 旋转屏幕 Ctrl+r
 
 百度输入法不支持adbinput，搜狗是支持的
+=======
+百度输入法不支持adbinput，搜狗是支持的
+>>>>>>> 8f36a44d5c584e2bb920636a9d403dd1b48b3cc8
