@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Scrcpy-Starto
 
 [更多介绍](http://iheld.net/)
@@ -150,7 +149,5 @@ shell setprop service.adb.tcp.port 5555
 启用/禁用FPS计数器（stdout）	Ctrl+i
 旋转屏幕 Ctrl+r
 
-百度输入法不支持adbinput，搜狗是支持的
-=======
-百度输入法不支持adbinput，搜狗是支持的
->>>>>>> 8f36a44d5c584e2bb920636a9d403dd1b48b3cc8
+# 百度输入法不支持adbinput，搜狗是支持的
+
