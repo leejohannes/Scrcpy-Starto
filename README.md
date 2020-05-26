@@ -9,13 +9,15 @@ Root Device:
 1. I'd perfer you have Magisk and any terminal emulator in your Phone
 Install Busybox & Props in Magisk
 2. Open terminal emulator key in:
-#	props
-#	4
-#	n
-#	service.adb.tcp.port
-#	5555
-#	y
-#	y
+```bash
+	props
+	4
+	n
+	service.adb.tcp.port
+	5555
+	y
+	y
+```
 then, your phone will reboot
 if you never turn on USB debugging plz do refer Un-Root Device 1st step
 
@@ -28,19 +30,24 @@ for MIUI you need turn on USB debugging(Security Settings)
 for EMUI you need ruen on "Only charing"...
 USB connect to PC, tick on trust always
 2. open Starto.bat, key in
-#	0
-#	shell setprop service.adb.tcp.port 5555
+```bash
+	0
+	shell setprop service.adb.tcp.port 5555
+```
 close tool.bat,bakc to starto.bat
 turn off then turn on USB Debugging
 
 Root Device:
 
 key in terminal emulator:
-#	su
-#	start adbd
+```bash
+	su
+	start adbd
+```
 termux:
-#sudo start adbd
-
+```bash
+sudo start adbd
+```
 =======================================================================
 
 On PC:
@@ -63,13 +70,15 @@ MIUI实现多屏协同功能
 面具中安装busybox和props模块
 并且手机中存有终端程序，我喜欢用的终端程序是juice ssh
 在终端中依次输入
-props
-4
-n
-service.adb.tcp.port
-5555
-y
-y
+```bash
+	props
+	4
+	n
+	service.adb.tcp.port
+	5555
+	y
+	y
+```
 设备会重启
 从来没有连过USB调试模式的请参照没有root的朋友的第一步
 
@@ -84,8 +93,14 @@ y
 第一步结束
 
 有面具的朋友可以关闭开发者模式，在终端中输入
-su
-start adbd
+```bash
+	su
+	start adbd
+```
+termux:
+```bash
+sudo start adbd
+```
 然后进入电脑上的操作
 
 没有root的朋友记得打开usb调试（安全设置）也进入电脑上的操作
@@ -100,7 +115,9 @@ start adbd
 没有root的朋友接着看（每次手机重启都要这样操作一遍）
 输入0回车
 接着输入
+```bash
 shell setprop service.adb.tcp.port 5555
+```
 关闭并打开USB调试模式
 然后就能断开数据线，输入st按tab键回车
 输入ip地址就能“多屏协同”了
@@ -128,5 +145,6 @@ shell setprop service.adb.tcp.port 5555
 安装APK	将APK文件拖入投屏
 传输文件到设备	将文件拖入投屏
 启用/禁用FPS计数器（stdout）	Ctrl+i
-旋转屏幕 ctrl+r
+旋转屏幕 Ctrl+r
+
 百度输入法不支持adbinput，搜狗是支持的
