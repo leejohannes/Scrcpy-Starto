@@ -8,7 +8,7 @@ Root Device:
 Install Busybox & Props in Magisk
 2. Open terminal emulator key in:
 #	props
-#	4
+#	5
 #	n
 #	service.adb.tcp.port
 #	5555
