@@ -1,6 +1,8 @@
 # Scrcpy-Starto
 
 [更多介绍](http://iheld.net/)
+这是一个通过cmd指令来简化scrcpy操作步骤的bat脚本
+masscan会被windows defance报毒
 
 Extract zip with same root of Scrcpy
 =======================================================================
