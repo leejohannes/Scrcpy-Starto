@@ -13,7 +13,7 @@ Install Busybox & Props in Magisk
 
 ```bash
 	props
-	4
+	4 ***last ver. using 5 Add/edit cutom props
 	n
 	service.adb.tcp.port
 	5555
