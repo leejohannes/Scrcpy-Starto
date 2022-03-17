@@ -110,9 +110,9 @@ sudo start adbd
 没有root的朋友记得打开usb调试（安全设置）也进入电脑上的操作
 
 # 电脑上的操作
-链接：https://pan.baidu.com/s/1PdAptZMcBsBfk6PsZWj-Gw 
-提取码：me6k
-下载并解压软件到一个不碍事的地方
+https://github.com/leejohannes/Scrcpy-Starto
+https://github.com/Genymobile/scrcpy
+下载并解压软件到同一个目录下
 运行文件中的starto.bat
 通过面具和终端设置好的朋友可以直接输入手机IP地址（通过 设置--我的设备--全部参数--最下面--状态信息--IP地址查看）开始连接操作了
 
