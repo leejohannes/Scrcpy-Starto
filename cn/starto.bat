@@ -1,5 +1,5 @@
 @echo off
-title ScrcpyÆô¶¯¹¤¾ß
+title Scrcpyå¯åŠ¨å·¥å…·
 cls
 cd /d "%~dp0"
 :start
@@ -7,15 +7,15 @@ echo.^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^
 >^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>^>
 set c=<nul
 adb devices -l
-for /f %%i in (ÉÏ´ÎµÄIP) do set ip=%%i
-echo.	»Ø³µ Ê¹ÓÃÉÏ´ÎµÄIP£º%ip%
+for /f %%i in (ä¸Šæ¬¡çš„IP) do set ip=%%i
+echo.	å›žè½¦ ä½¿ç”¨ä¸Šæ¬¡çš„IPï¼š%ip%
 echo.	. 192.168.x.x
-echo.	0 ÖØÆôºó/Ê×´ÎÁ¬½Ó/´ò¿ª¹¤¾ß
-echo.	1 Á¬½ÓID
-echo.	2 ÍøÂçÉ¨Ãè¹¤¾ß
-echo.	3 Á¬½ÓËùÓÐÕÒµ½µÄÉè±¸
-echo.	4 ¶Ï¿ªËùÓÐ²¢ÍË³ö
-set /p ip=ÆäËûµØÖ·,ÇëÖ±½ÓÊäÈë:
+echo.	0 é‡å¯åŽ/é¦–æ¬¡è¿žæŽ¥/æ‰“å¼€å·¥å…·
+echo.	1 è¿žæŽ¥ID
+echo.	2 ç½‘ç»œæ‰«æå·¥å…·
+echo.	3 è¿žæŽ¥æ‰€æœ‰æ‰¾åˆ°çš„è®¾å¤‡
+echo.	4 æ–­å¼€æ‰€æœ‰å¹¶é€€å‡º
+set /p ip=å…¶ä»–åœ°å€,è¯·ç›´æŽ¥è¾“å…¥:
 if "%ip%" equ "4" (adb kill-server
 exit)
 if "%ip%" equ "3" goto connect
@@ -27,24 +27,24 @@ goto start )
 if "%ip%" equ "." goto ip192
 goto end
 :t
-set /p ip=ÊäÈëtransport_id:ºóµÄÊý×Ö
+set /p ip=è¾“å…¥transport_id:åŽçš„æ•°å­—
 for /f "delims=:" %%i in ('adb devices -l ^|find /i "transport_id:%ip%"') do set ip=%%i
 goto end
 :ip192
 set /p ip=192.168.
 set ip=192.168.%ip%
 :end
-echo. ÊäµÄÈëÊÖ»úIPÊÇ%ip%£¬Èç¹ûÊäÈëÓÐÎóµÈ´ý°ë·ÖÖÓ×Ô¶¯Ìø×ª
+echo. è¾“çš„å…¥æ‰‹æœºIPæ˜¯%ip%ï¼Œå¦‚æžœè¾“å…¥æœ‰è¯¯ç­‰å¾…åŠåˆ†é’Ÿè‡ªåŠ¨è·³è½¬
 set b=0
 for /f %%i in ('adb devices ^|find /i "%ip%"') do set b=1
 if %b% equ 0 ( for /f %%i in ('adb connect %ip% ^|find /i "connected"') do ( goto success ))
-if %b% equ 0 ( echo ÊäÈëµÄIPÎÞ·¨Á¬½Ó£¬Çë´ò¿ªÊÖ»úÏà¹Ø¹¦ÄÜ²¢È·ÈÏIP
+if %b% equ 0 ( echo è¾“å…¥çš„IPæ— æ³•è¿žæŽ¥ï¼Œè¯·æ‰“å¼€æ‰‹æœºç›¸å…³åŠŸèƒ½å¹¶ç¡®è®¤IP
 goto start)
 :success
-set /p c=Á¬½Ó³É¹¦£¬°´»Ø³µ´ò¿ªÍ¼ÐÎ½çÃæ£¬ÊäÈëÆäËû¼ÌÐøÁ¬½Ó
-echo. %ip%>ÉÏ´ÎµÄIP
+set /p c=è¿žæŽ¥æˆåŠŸï¼ŒæŒ‰å›žè½¦æ‰“å¼€å›¾å½¢ç•Œé¢ï¼Œè¾“å…¥å…¶ä»–ç»§ç»­è¿žæŽ¥
+echo. %ip%>ä¸Šæ¬¡çš„IP
 if not "%c%" equ "" goto start
-start /i scrcpy-noconsole.exe -s %ip% 1>nul 2>nul
+start /i scrcpy-noconsole -s %ip% 1>nul 2>nul
 exit
 :connect
 for /f "tokens=6" %%i in (ip) do ( adb connect %%i)
