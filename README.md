@@ -74,7 +74,7 @@ MIUI实现多屏协同功能
 在终端中依次输入
 ```bash
 	props
-	4
+	4 ***最新版是5 Add/edit cutom props
 	n
 	service.adb.tcp.port
 	5555
