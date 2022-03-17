@@ -44,7 +44,7 @@ goto start)
 set /p c=Success,Enter to GUI,press other key to connect other 
 echo. %ip%>last_ip
 if not "%c%" equ "" goto start
-start /i scrcpy-noconsole.exe -s %ip% 1>nul 2>nul
+start /i scrcpy-noconsole -s %ip% 1>nul 2>nul
 exit
 :connect
 for /f "tokens=6" %%i in (ip) do ( adb connect %%i)
